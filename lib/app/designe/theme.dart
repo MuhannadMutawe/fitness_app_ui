@@ -19,15 +19,4 @@ class AppTheme {
       ),
     ),
   );
-
-  static ThemeData darkTheme = ThemeData(
-    useMaterial3: true,
-    brightness: Brightness.dark,
-    primarySwatch: Colors.blue,
-    scaffoldBackgroundColor: Colors.grey[900],
-    appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.blue,
-      foregroundColor: Colors.white,
-    ),
-  );
 }

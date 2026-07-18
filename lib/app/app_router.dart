@@ -43,7 +43,9 @@ abstract class AppRouter {
           ),
         ],
         builder: (context, state, navigationShell) {
-          return BottomNavBar();
+          return BottomNavBar(
+            shell: navigationShell,
+          );
         },
       ),
     ],

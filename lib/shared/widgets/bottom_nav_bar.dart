@@ -25,7 +25,7 @@ class BottomNavBar extends StatelessWidget {
           margin: EdgeInsets.only(bottom: DT.s8, right: DT.s6, left: DT.s6),
           padding: EdgeInsets.symmetric(horizontal: DT.s2),
           decoration: BoxDecoration(
-            color: DT.bottomNavBg,
+            color: DT.bgBlack,
             borderRadius: BorderRadius.circular(30),
           ),
           child: Row(
@@ -79,7 +79,7 @@ class NavItem extends StatelessWidget {
         ),
         child: Icon(
           icon,
-          color: isSelected ? DT.bottomNavBg : DT.bg,
+          color: isSelected ? DT.bgBlack : DT.bg,
           size: DT.s6,
         ),
       ),

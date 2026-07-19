@@ -17,7 +17,7 @@ class BottomNavBar extends StatelessWidget {
     return Scaffold(
       body: shell,
       bottomNavigationBar: Container(
-        height: 90,
+        height: 100,
         decoration: BoxDecoration(
           color: DT.bg,
         ),

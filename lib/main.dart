@@ -1,8 +1,8 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:fitness_app_ui/app/app_router.dart';
 import 'package:fitness_app_ui/app/designe/theme.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
 
 void main() async {
@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
+      routerConfig: AppRouter.router,
     );
   }
 }

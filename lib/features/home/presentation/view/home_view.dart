@@ -98,7 +98,73 @@ class HomeView extends StatelessWidget {
           ],
         ),
       ),
-      body: Container(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            DailyChallengeCard(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DailyChallengeCard extends StatelessWidget {
+  const DailyChallengeCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(DT.s5),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            DT.challengeGradientStart,
+            DT.challengeGradientEnd,
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(DT.rCard),
+        boxShadow: [
+          BoxShadow(
+            color: DT.shadowLight,
+            blurRadius: 20,
+            offset: Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Daily challeng',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                    color: DT.textPrimary,
+                  ),
+                ),
+                SizedBox(
+                  height: DT.s2,
+                ),
+                Text(
+                  'You are plan before 9:00 AM',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: DT.textSecondary,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

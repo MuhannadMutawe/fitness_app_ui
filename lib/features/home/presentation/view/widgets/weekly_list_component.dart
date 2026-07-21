@@ -17,7 +17,7 @@ class WeeklyListComponent extends StatelessWidget {
     final now = DateTime.now();
     final startOfWeek = now.subtract(Duration(days: now.weekday - 1));
     return SizedBox(
-      height: 70,
+      height: 80,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 7,

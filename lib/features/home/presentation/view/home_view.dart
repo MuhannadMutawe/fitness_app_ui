@@ -2,6 +2,7 @@ import 'package:fitness_app_ui/app/designe/designe_token.dart';
 import 'package:fitness_app_ui/features/home/presentation/view/widgets/app_bar_title.dart';
 import 'package:fitness_app_ui/features/home/presentation/view/widgets/daily_challenge_card.dart';
 import 'package:fitness_app_ui/features/home/presentation/view/widgets/plan_card.dart';
+import 'package:fitness_app_ui/features/home/presentation/view/widgets/social_media_cards.dart';
 import 'package:fitness_app_ui/features/home/presentation/view/widgets/weekly_list_component.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -80,6 +81,8 @@ class _HomeViewState extends State<HomeView> {
                 ],
               ),
             ),
+            SizedBox(height: DT.s6),
+            SocialMediaCards(),
           ],
         ),
       ),

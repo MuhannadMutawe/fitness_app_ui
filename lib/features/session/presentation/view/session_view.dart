@@ -1,3 +1,4 @@
+import 'package:fitness_app_ui/app/designe/designe_token.dart';
 import 'package:flutter/material.dart';
 
 class SessionView extends StatelessWidget {
@@ -5,6 +6,21 @@ class SessionView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: DT.bg,
+        elevation: 0,
+        title: Text(
+          'Session',
+          style: TextStyle(
+            fontSize: 18,
+            color: DT.textPrimary,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(),
+    );
   }
 }

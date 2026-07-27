@@ -20,6 +20,7 @@ class SessionView extends StatelessWidget {
           ),
         ),
         centerTitle: true,
+        scrolledUnderElevation: 0,
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(DT.s5),
@@ -52,6 +53,32 @@ class SessionView extends StatelessWidget {
               title: 'Yoga Group',
               trainer: 'Tiffany Way',
               duration: '45 min',
+              difficulty: 'Light',
+              calories: '115 kcal',
+              description:
+                  'Gentle yinvasa flow to improve flexibility and balance.',
+              color: DT.cardYellow,
+              onTap: () => context.go('/session-detail'),
+            ),
+            const SizedBox(height: DT.s4),
+            SessionCard(
+              title: 'Yoga Group',
+              trainer: 'Tiffany Way',
+              duration: '45 min',
+              difficulty: 'hard',
+              calories: '115 kcal',
+              description:
+                  'Gentle yinvasa flow to improve flexibility and balance.',
+              color: DT.cardYellow,
+              onTap: () => context.go('/session-detail'),
+            ),
+            const SizedBox(
+              height: DT.s6,
+            ),
+            SessionCard(
+              title: 'Yoga Group',
+              trainer: 'Tiffany Way',
+              duration: '45 min',
               difficulty: 'Medium',
               calories: '115 kcal',
               description:
@@ -60,7 +87,32 @@ class SessionView extends StatelessWidget {
               onTap: () => context.go('/session-detail'),
             ),
             const SizedBox(
-              height: DT.s4,
+              height: DT.s6,
+            ),
+            SessionCard(
+              title: 'Yoga Group',
+              trainer: 'Tiffany Way',
+              duration: '45 min',
+              difficulty: 'Light',
+              calories: '115 kcal',
+              description:
+                  'Gentle yinvasa flow to improve flexibility and balance.',
+              color: DT.cardYellow,
+              onTap: () => context.go('/session-detail'),
+            ),
+            const SizedBox(
+              height: DT.s6,
+            ),
+            SessionCard(
+              title: 'Yoga Group',
+              trainer: 'Tiffany Way',
+              duration: '45 min',
+              difficulty: 'hard',
+              calories: '115 kcal',
+              description:
+                  'Gentle yinvasa flow to improve flexibility and balance.',
+              color: DT.cardYellow,
+              onTap: () => context.go('/session-detail'),
             ),
           ],
         ),
@@ -101,6 +153,13 @@ class SessionCard extends StatelessWidget {
           color: DT.bgWhite,
           borderRadius: BorderRadius.circular(DT.s5),
           border: Border.all(color: DT.bgWhite, width: 2),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black54.withAlpha(80),
+              blurRadius: 8,
+              offset: Offset(2, 8),
+            ),
+          ],
         ),
         child: Row(
           children: [
@@ -136,7 +195,9 @@ class SessionCard extends StatelessWidget {
                           vertical: DT.s1,
                         ),
                         decoration: BoxDecoration(
-                          color: Colors.red,
+                          color: _getDifficultyColor(
+                            difficulty,
+                          ).withOpacity(0.1),
                           borderRadius: BorderRadius.circular(DT.s2),
                         ),
                         child: Text(
@@ -144,7 +205,7 @@ class SessionCard extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.w500,
-                            color: Colors.white,
+                            color: _getDifficultyColor(difficulty),
                           ),
                         ),
                       ),
@@ -155,6 +216,16 @@ class SessionCard extends StatelessWidget {
                   ),
                   Text(
                     'trainer : $trainer',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: DT.textPrimary,
+                    ),
+                  ),
+                  SizedBox(
+                    height: DT.s2,
+                  ),
+                  Text(
+                    description,
                     style: TextStyle(
                       fontSize: 14,
                       color: DT.textPrimary,
@@ -203,6 +274,19 @@ class SessionCard extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Color _getDifficultyColor(String difficulty) {
+    switch (difficulty.toLowerCase()) {
+      case 'light':
+        return DT.difficultyLight;
+      case 'medium':
+        return DT.difficultyMedium;
+      case 'hard':
+        return DT.difficultyHard;
+      default:
+        return DT.iconGrey;
+    }
   }
 }
 

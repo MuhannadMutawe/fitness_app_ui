@@ -302,13 +302,10 @@ Add your application screenshots here:
 screenshots/
 ├── home.png
 ├── challenge.png
-├── workout.png
+├── session.png
 └── profile.png
 ```
 
-Then display them in the README:
-
-```markdown
 ## 📸 Screenshots
 
 <p align="center">
@@ -316,7 +313,6 @@ Then display them in the README:
   <img src="assets\images\session.png" width="250"/>
   <img src="assets\images\profile.png" width="250"/>
 </p>
-```
 
 ---
 

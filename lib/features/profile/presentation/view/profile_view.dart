@@ -1,6 +1,5 @@
-import 'dart:math';
-
 import 'package:fitness_app_ui/app/designe/designe_token.dart';
+import 'package:fitness_app_ui/features/profile/presentation/view/widgats/metrics_cards.dart';
 import 'package:fitness_app_ui/features/profile/presentation/view/widgats/user_profile_section.dart';
 import 'package:flutter/material.dart';
 
@@ -42,6 +41,11 @@ class ProfileView extends StatelessWidget {
             SizedBox(
               height: DT.s6,
             ),
+            MetricsCards(),
+            SizedBox(
+              height: DT.s6,
+            ),
+            // Activitylist()
           ],
         ),
       ),
